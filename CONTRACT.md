@@ -1,0 +1,36 @@
+# Projeto do meu portifólio como engenheiro de software
+- React + TypeScript + Vite + shadcn/ui + tailwindcss + phosphor/icons
+- Minimal black and white - Não alterar cores do index.css
+- Landing page com meu perfil low profile e minimalista
+- Menu no topo com um logotipo da minha marca, e as opções de menu:
+  - About / Sobre
+  - Background / Experiência
+  - Skills / Habilidades
+  - Projects / Projetos
+  - Contact / Contato
+  - Resume / Currículo 
+- Opção para inglês e português
+- Dark / Light
+- Utilizar nos imports o alias @/ do typescript, configurar diretorios criados
+- adicionar o diretorio pages, para a pagina principal
+- e dentro de pages adicionar o subdiretorio sections para separar cada secção da página
+## Adding components
+- Composition pattern
+- diretórios com nome minúsculo
+- Adicione o atributo id em todos os componentes, para facilitar a localização e testes
+- componentes com pasta CamelCase e um arquivo index.tsx
+- SubComponentes e hooks no mesmo padrão dos componentes
+- Se é um sub-componente não precisa adicionar o prefixo em seu
+- Sempre utilizar export - num export defaul
+- Sempre utilizar o padrão de functions nos componentes, nunca arrow functions
+- Sempre utilizar os componentes do shadcn
+- Não utilizar valores arbritrários no tailwind
+- Sempre pensar e implementar componentes de forma responsiva
+- Icones do phosphor com o sufixo Icon, para não utilizar os deprecated
+## Referencia
+- Minimalismo: https://yeezy.com/
+- Top menu: kiro.dev e https://workspace.google.com/experiments/?hl=en  
+- https://www.reactbits.dev/
+- https://www.reactbits.dev/
+- https://ui.shadcn.com/docs/components
+- https://www.youtube.com/watch?v=WOfrULDNbZ0

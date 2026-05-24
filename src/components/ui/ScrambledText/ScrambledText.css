@@ -1,0 +1,15 @@
+.scrambled-text-block {
+	margin: 0;
+	max-width: 100%;
+}
+
+.scrambled-text-block p {
+	margin: 0;
+	font: inherit;
+	color: inherit;
+}
+
+.scrambled-text-block .char {
+	will-change: transform;
+	display: inline-block;
+}

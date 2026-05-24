@@ -1,21 +1,24 @@
-import { Button } from "@/components/ui/button"
+import { SplashCursor } from "@/components/SplashCursor";
+import { TopMenu } from "@/components/TopMenu";
+import { LanguageProvider } from "@/context/LanguageContext";
+import { useActiveSection } from "@/hooks/useActiveSection";
+import { Home } from "@/pages/Home";
 
 export function App() {
-  return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
-  )
-}
+	const activeSection = useActiveSection();
 
-export default App
+	return (
+		<LanguageProvider>
+			<div
+				id="app-shell"
+				className="relative bg-white selection:bg-black dark:bg-black dark:selection:bg-white min-h-screen font-sans text-black selection:text-white dark:selection:text-black dark:text-white transition-colors duration-300"
+			>
+				<SplashCursor />
+				<div id="app-content" className="z-10 relative">
+					<TopMenu activeSection={activeSection} />
+					<Home />
+				</div>
+			</div>
+		</LanguageProvider>
+	);
+}
