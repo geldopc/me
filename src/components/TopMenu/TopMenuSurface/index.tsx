@@ -24,7 +24,7 @@ export function TopMenuSurface({
 			? ""
 			: isScrolled
 				? "rounded-2xl border-2 border-black/15 dark:border-white/15 overflow-hidden"
-				: "border-b border-black/5 dark:border-white/5 overflow-hidden"
+				: "border-b border-black/5 dark:border-white/5"
 	}`;
 
 	if (shouldUseGlassSurface) {

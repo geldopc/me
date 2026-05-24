@@ -72,10 +72,10 @@ const translations: Record<Language, Translations> = {
 			resume: "Resume",
 		},
 		hero: {
-			title: "Geldo Pina Costa",
-			subtitle: "Full Stack Engineer",
+			title: "Hi there, I'm Geldo Pina Costa! 👋",
+			subtitle: "🚀 Senior Software Engineer | Full-Stack Developer",
 			description:
-				"Hey, my name is Geldo Pina, also known as @geldopc online. I'm a Full Stack Developer recognized for delivering 'state of the art' solutions through creativity, refined taste, and a minimalist approach. Deeply inspired by the energy of Rock and Rap, I keep a low profile on social media, focusing my energy on what I love most: taking outdated, cluttered systems and transforming them into beautiful, seamless experiences. I'm always curious to push the boundaries of new technologies and creative coding. With over 15 years of experience in the field, I bring deep expertise and innovation to every project.",
+				"I am a Senior Software Engineer with 15 years of experience building scalable, high-performance applications across critical sectors such as Retail, Finance, Government, and Agribusiness. My engineering philosophy is straightforward: \"Make it simple and right\". I thrive on solving complex architectural problems and delivering solutions that drive real business value.",
 		},
 		about: {
 			title: "About",
@@ -113,10 +113,10 @@ const translations: Record<Language, Translations> = {
 			resume: "Currículo",
 		},
 		hero: {
-			title: "Geldo Pina Costa",
-			subtitle: "Engenheiro Full Stack",
+			title: "Olá, eu sou Geldo Pina Costa! 👋",
+			subtitle: "🚀 Engenheiro de Software Sênior | Desenvolvedor Full-Stack",
 			description:
-				"Olá, o meu nome é Geldo Pina, também conhecido como @geldopc. Sou um Desenvolvedor Full Stack reconhecido por entregar soluções 'estado da arte' através de criatividade, bom gosto e uma abordagem minimalista. Profundamente inspirado pela energia do Rock e Rap, mantenho um perfil discreto nas redes sociais, focando a minha energia no que mais amo: pegar em sistemas feios e obsoletos e transformá-los em experiências belas e fluidas. Sou movido pela curiosidade de explorar novas tecnologias e programação criativa. Com mais de 15 anos de experiência na área, trago expertise profunda e inovação para cada projeto.",
+				"Sou um Engenheiro de Software Sênior com 15 anos de experiência na construção de aplicações escaláveis e de alta performance em setores críticos como Varejo, Finanças, Governo e Agronegócio. Minha filosofia de engenharia é direta: \"Faça simples e certo\". Gosto de resolver problemas arquitetônicos complexos e entregar soluções que gerem valor real para o negócio.",
 		},
 		about: {
 			title: "Sobre",
