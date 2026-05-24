@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8">
     <title>Redirecionando...</title>
@@ -9,7 +9,7 @@
       
       // Se a rota não é a raiz /me/, redireciona para index.html
       if (pathArray[1] === 'me' && pathArray.length > 2) {
-        window.location.replace('/me/#' + pathArray.slice(2).join('/'));
+        window.location.replace(`/me/#${pathArray.slice(2).join('/')}`);
       }
     </script>
   </head>
