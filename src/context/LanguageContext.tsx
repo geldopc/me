@@ -30,6 +30,13 @@ type Translations = {
 		frontend: string;
 		tools: string;
 	};
+	contact: {
+		title: string;
+		description: string;
+		email: string;
+		linkedin: string;
+		github: string;
+	};
 	footer: {
 		copyright: string;
 	};
@@ -41,6 +48,7 @@ type TranslationGetter = {
 	about: Translations["about"];
 	projects: Translations["projects"];
 	skills: Translations["skills"];
+	contact: Translations["contact"];
 	footer: Translations["footer"];
 };
 
@@ -84,6 +92,14 @@ const translations: Record<Language, Translations> = {
 			frontend: "Frontend",
 			tools: "Tools & Practices",
 		},
+		contact: {
+			title: "Get in Touch",
+			description:
+				"Feel free to reach out to me through any of these channels. I'm always interested in new opportunities and collaborations.",
+			email: "Email",
+			linkedin: "LinkedIn",
+			github: "GitHub",
+		},
 		footer: {
 			copyright: "© 2026 Geldo Pina Costa. All rights reserved.",
 		},
@@ -117,6 +133,14 @@ const translations: Record<Language, Translations> = {
 			frontend: "Frontend",
 			tools: "Ferramentas & Práticas",
 		},
+		contact: {
+			title: "Entre em Contato",
+			description:
+				"Sinta-se à vontade para entrar em contato comigo através de qualquer um desses canais. Estou sempre interessado em novas oportunidades e colaborações.",
+			email: "Email",
+			linkedin: "LinkedIn",
+			github: "GitHub",
+		},
 		footer: {
 			copyright: "© 2026 Geldo Pina Costa. Todos os direitos reservados.",
 		},
@@ -136,6 +160,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
 		about: translations[language].about,
 		projects: translations[language].projects,
 		skills: translations[language].skills,
+		contact: translations[language].contact,
 		footer: translations[language].footer,
 	};
 
