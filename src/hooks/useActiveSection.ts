@@ -11,9 +11,8 @@ export function useActiveSection() {
 
 			sections.forEach((section) => {
 				const rect = section.getBoundingClientRect();
-				const distance = Math.abs(rect.top - 100); // 100px do topo da viewport
+				const distance = Math.abs(rect.top - 100);
 
-				// Se esta seção é mais próxima do ponto de detecção (100px do topo)
 				if (distance < closestDistance) {
 					closestDistance = distance;
 					closestSection = section.getAttribute("data-section") || "";
@@ -26,7 +25,6 @@ export function useActiveSection() {
 		};
 
 		window.addEventListener("scroll", handleScroll);
-		// Chamar uma vez na montagem para definir a seção inicial
 		setTimeout(handleScroll, 0);
 
 		return () => window.removeEventListener("scroll", handleScroll);

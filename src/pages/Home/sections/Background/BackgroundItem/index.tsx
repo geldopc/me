@@ -1,12 +1,12 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/elements/Badge";
 import {
 	Card,
 	CardContent,
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "@/components/ui/card";
-import type { Background } from "..";
+} from "@/components/elements/Card";
+import type { Background } from "@/pages/Home/sections/Background";
 
 interface BackgroundItemProps {
 	background: Background;

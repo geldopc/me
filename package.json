@@ -4,8 +4,9 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
+		"predev": "node scripts/free-port.mjs 5173",
 		"dev": "vite",
-		"net": "vite --host",
+		"net": "node scripts/net.mjs",
 		"build": "tsc -b && vite build",
 		"lint": "biome check .",
 		"format": "biome format --write .",
@@ -36,6 +37,7 @@
 		"@types/react-dom": "^19.2.3",
 		"@vitejs/plugin-react": "^5.2.0",
 		"gh-pages": "^6.3.0",
+		"qrcode-terminal": "^0.12.0",
 		"shadcn": "^4.8.0",
 		"typescript": "~5.9.3",
 		"vite": "^7.3.1"

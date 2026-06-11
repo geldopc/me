@@ -1,8 +1,8 @@
-import { SplashCursor } from "@/components/SplashCursor";
-import { TopMenu } from "@/components/TopMenu";
-import { LanguageProvider } from "@/context/LanguageContext";
+import { SplashCursor } from "@/components/modules/SplashCursor";
+import { TopMenu } from "@/components/modules/TopMenu";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { Home } from "@/pages/Home";
+import { LanguageProvider } from "@/providers/Language";
 
 export function App() {
 	const activeSection = useActiveSection();

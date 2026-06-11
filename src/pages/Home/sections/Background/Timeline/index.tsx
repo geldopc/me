@@ -2,7 +2,7 @@ import {
 	HoverCard,
 	HoverCardContent,
 	HoverCardTrigger,
-} from "@/components/ui/hover-card";
+} from "@/components/elements/HoverCard";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const timelineData = {
@@ -82,6 +82,44 @@ const timelineData = {
 				"Liderando desenvolvimento de sistema de checkout omnichannel impactando 500+ lojas no Brasil. (Neste mesmo ano atuei brevemente na Resource IT).",
 		},
 	],
+	fr: [
+		{
+			id: "infox",
+			company: "Infox Tecnologia",
+			startYear: "2010",
+			endYear: "2013",
+			role: "Développeur Web",
+			description:
+				"Pionnier sur le système de processus judiciaire électronique (PJe) pour les tribunaux fédéraux.",
+		},
+		{
+			id: "sgn",
+			company: "SGN",
+			startYear: "2013",
+			endYear: "2015",
+			role: "Référent technique & Développeur",
+			description:
+				"Développement d'une plateforme de détection de fraude pour une banque d'État avec des fonctionnalités de Business Intelligence.",
+		},
+		{
+			id: "sm-solucoes",
+			company: "SM Soluções",
+			startYear: "2015",
+			endYear: "2019",
+			role: "Analyste en Développement de Systèmes",
+			description:
+				"Co-auteur de la plateforme d'intégration agricole (SIAPEC3) au service de plusieurs entités étatiques.",
+		},
+		{
+			id: "riachuelo",
+			company: "Riachuelo",
+			startYear: "2019",
+			endYear: "Présent",
+			role: "Ingénieur Logiciel Senior",
+			description:
+				"Direction du développement frontend pour un système de PDV omnicanal dans plus de 500 magasins.",
+		},
+	],
 };
 
 interface TimelineProps {
@@ -98,7 +136,7 @@ export function Timeline({
 	onPause,
 }: TimelineProps) {
 	const { language } = useLanguage();
-	const data = timelineData[language];
+	const data = timelineData[language] ?? timelineData.en;
 
 	return (
 		// biome-ignore lint/a11y/noStaticElementInteractions: Pause is a visual enhancement on hover
@@ -113,7 +151,6 @@ export function Timeline({
 					to { width: 100%; }
 				}
 			`}</style>
-			{/* Linha base do tempo (fundo) */}
 			<div className="top-1/2 right-4 left-4 absolute bg-black/10 dark:bg-white/10 h-[2px] -translate-y-1/2 pointer-events-none" />
 
 			{data.map((item, index) => {
@@ -142,10 +179,7 @@ export function Timeline({
 						>
 							<HoverCardTrigger asChild>
 								<div className="group relative flex items-center w-full h-full cursor-pointer">
-									{/* Destaque da linha de jornada ao passar o mouse */}
 									<div className="top-1/2 right-0 left-0 z-0 absolute bg-transparent dark:group-hover:bg-white/60 group-hover:bg-black/60 h-[2px] group-hover:h-[4px] transition-all -translate-y-1/2" />
-
-									{/* Loading Line */}
 									<div
 										className={`top-1/2 left-0 z-0 absolute bg-black dark:bg-white h-[2px] transition-all -translate-y-1/2 ${isActive ? "opacity-100" : "opacity-0"}`}
 										style={{
@@ -157,14 +191,11 @@ export function Timeline({
 										}}
 									/>
 
-									{/* Bullet de início de jornada e ano */}
 									<div className="top-1/2 left-0 z-10 absolute flex flex-col items-center -translate-x-1/2 -translate-y-1/2">
-										{/* Bullet */}
 										<div
 											className={`border-2 border-white dark:border-black rounded-full w-2.5 h-2.5 transition-all transform ${isActive ? "bg-black dark:bg-white scale-125" : "bg-black/20 dark:bg-white/20 dark:group-hover:bg-white group-hover:bg-black group-hover:scale-125"}`}
 										/>
 
-										{/* Ano (intercalado) */}
 										<div
 											className={`absolute ${index % 2 === 0 ? "top-4 mt-1" : "bottom-4 mb-1"} opacity-50 group-hover:opacity-100 transition-opacity`}
 										>
@@ -174,13 +205,11 @@ export function Timeline({
 										</div>
 									</div>
 
-									{/* Bullet de fim de jornada */}
 									<div className="top-1/2 right-0 z-10 absolute flex flex-col items-center -translate-y-1/2 translate-x-1/2">
 										<div
 											className={`border-2 border-white dark:border-black rounded-full w-2.5 h-2.5 transition-all transform ${isActive ? "bg-black dark:bg-white scale-125" : "bg-black/20 dark:bg-white/20 dark:group-hover:bg-white group-hover:bg-black group-hover:scale-125"}`}
 										/>
 
-										{/* Ano final (apenas no último item, posição oposta ao inicial) */}
 										{isLast && (
 											<div
 												className={`absolute ${index % 2 === 0 ? "bottom-4 mb-1" : "top-4 mt-1"} opacity-50 group-hover:opacity-100 transition-opacity`}

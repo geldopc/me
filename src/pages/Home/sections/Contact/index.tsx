@@ -18,7 +18,7 @@ export function Contact() {
 		{
 			id: "linkedin",
 			label: strings.contact.linkedin,
-			href: "https://linkedin.com/in/geldopc",
+			href: "https://www.linkedin.com/in/geldopc/",
 			icon: LinkedinLogoIcon,
 		},
 		{

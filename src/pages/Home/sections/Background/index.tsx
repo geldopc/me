@@ -1,8 +1,8 @@
 import { PauseIcon, PlayIcon } from "@phosphor-icons/react";
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/hooks/useLanguage";
-import { BackgroundItem } from "./BackgroundItem";
-import { Timeline } from "./Timeline";
+import { BackgroundItem } from "@/pages/Home/sections/Background/BackgroundItem";
+import { Timeline } from "@/pages/Home/sections/Background/Timeline";
 
 export interface Background {
 	id: string;
@@ -112,11 +112,60 @@ const background: Record<string, Background[]> = {
 			skills: ["Java", "JSF", "Hibernate", "JBoss Seam", "PostgreSQL"],
 		},
 	],
+	fr: [
+		{
+			id: "riachuelo",
+			title: "Ingénieur Logiciel Senior",
+			company: "Riachuelo",
+			period: "Nov 2019 - Présent",
+			description:
+				"Participation au projet Pdv Omni (Point de vente omnicanal), un nouveau système de point de vente pour les magasins Riachuelo, qui permettra la même expérience de vente sur diverses plateformes : caisse traditionnelle, PDV mobile, self-checkout ou e-commerce. Activités : Analyse et Développement (back-end et front-end). Davantage axé sur le front-end, avec la création de la bibliothèque de composants, des écrans et le travail avec les UI/UX sur les questions d'ergonomie.",
+			skills: [
+				"React",
+				"React Native",
+				"Redux",
+				"Node.js",
+				"TypeScript",
+				"Electron",
+				"Java",
+				"Spring Boot",
+				"Kafka",
+				"AWS",
+			],
+		},
+		{
+			id: "sm-solucoes",
+			title: "Analyste en Développement de Systèmes",
+			company: "SM Soluções para Gestão da Informação",
+			period: "Avr 2015 - Sep 2019",
+			description:
+				"Participation aux projets SIAPEC1, SIAPEC2, co-auteur du projet SIAPEC3, un système d'intégration agricole qui gère les activités de défense agricole et sert de pont entre les entités étatiques et les divers segments de l'agro-industrie. Activités : Développement de plateformes web et mobiles (back-end et front-end) et analyse de systèmes.",
+			skills: ["Java", "JSF", "Hibernate", "Angular", "React", "Ionic"],
+		},
+		{
+			id: "sgn",
+			title: "Analyste / Programmeur / Référent technique",
+			company: "SGN - Soluções em Gestão de Negócios",
+			period: "Aoû 2013 - Mar 2015",
+			description:
+				"Participation au projet anti-fraude de la Banese (Banque de l'État du Sergipe), une plateforme qui détecte, notifie et présente, via la Business Intelligence, les éventuelles tentatives de fraude sur les cartes bancaires. Activités : Développement (back-end et front-end) et analyse de systèmes.",
+			skills: ["C#", "ASP.NET MVC", "Entity Framework", "SQL Server"],
+		},
+		{
+			id: "infox",
+			title: "Développeur Web",
+			company: "Infox Tecnologia da Informação",
+			period: "Nov 2010 - Juil 2013",
+			description:
+				"Participation au projet PJe (Processus Judiciaire Électronique), un système qui permet la réalisation d'actes de procédure dans toutes les branches du pouvoir judiciaire (fédéral, étatique et du travail). Activités : Développement (back-end et front-end).",
+			skills: ["Java", "JSF", "Hibernate", "JBoss Seam", "PostgreSQL"],
+		},
+	],
 };
 
 export function Backgrounds() {
-	const { language } = useLanguage();
-	const currentBackgrounds = background[language];
+	const { language, strings } = useLanguage();
+	const currentBackgrounds = background[language] ?? background.en;
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(false);
 	const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -151,7 +200,7 @@ export function Backgrounds() {
 			<div className="space-y-8">
 				<div className="flex justify-between items-center gap-4">
 					<h2 className="font-space-grotesk font-bold text-3xl whitespace-nowrap shrink-0">
-						{language === "en" ? "Background" : "Experiência"}
+						{strings.nav.background}
 					</h2>
 
 					<Timeline
@@ -182,7 +231,6 @@ export function Backgrounds() {
 				</div>
 
 				<div className="relative items-start w-full">
-					{/* Main Background Display */}
 					<div className="relative min-h-[400px]">
 						{currentBackgrounds.map((exp, index) => (
 							<div
