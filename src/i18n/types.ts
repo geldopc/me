@@ -11,6 +11,14 @@ export interface ResumeFile {
 	file: string;
 }
 
+export interface Project {
+	id: string;
+	name: string;
+	url: string;
+	repo?: string;
+	tech: string[];
+}
+
 export interface Translations {
 	nav: {
 		about: string;
@@ -41,7 +49,11 @@ export interface Translations {
 	};
 	projects: {
 		title: string;
+		subtitle: string;
 		empty: string;
+		liveCta: string;
+		sourceCta: string;
+		descriptions: Record<string, string>;
 	};
 	resume: {
 		cta: string;

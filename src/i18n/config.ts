@@ -16,12 +16,29 @@ export type Language = (typeof LANGUAGES)[number]["code"];
 
 export const DEFAULT_LANGUAGE: Language = "pt";
 
-import type { ResumeFile, SkillTag } from "@/i18n/types";
+import type { Project, ResumeFile, SkillTag } from "@/i18n/types";
 
 export const RESUME_FILES: ResumeFile[] = [
 	{ code: "PT", label: "Português", file: "/cv/geldo-pina-costa-pt.pdf" },
 	{ code: "EN", label: "English", file: "/cv/geldo-pina-costa-en.pdf" },
 	{ code: "FR", label: "Français", file: "/cv/geldo-pina-costa-fr.pdf" },
+];
+
+export const PROJECTS: Project[] = [
+	{
+		id: "xml-formatter",
+		name: "myXmlFormatter",
+		url: "https://geldopc.github.io/myXmlFormatter/",
+		repo: "https://github.com/geldopc/myXmlFormatter",
+		tech: ["React", "TypeScript", "Vite", "Tailwind"],
+	},
+	{
+		id: "json-formatter",
+		name: "myJsonFormatter",
+		url: "https://geldopc.github.io/myJsonFormatter/",
+		repo: "https://github.com/geldopc/myJsonFormatter",
+		tech: ["React", "TypeScript", "Vite", "Tailwind"],
+	},
 ];
 
 export const SKILL_TAGS_CORE: SkillTag[] = [

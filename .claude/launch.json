@@ -5,8 +5,7 @@
       "name": "Dev Server",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
-      "env": { "VITE_BASE": "/" },
-      "port": 5173
+      "port": 5200
     },
     {
       "name": "Preview Server",

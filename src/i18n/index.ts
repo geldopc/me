@@ -8,4 +8,4 @@ export const translations: Record<Language, Translations> = { pt, en, fr };
 
 export type { Language } from "@/i18n/config";
 export { DEFAULT_LANGUAGE, LANGUAGES, RESUME_FILES } from "@/i18n/config";
-export type { ResumeFile, SkillTag, Translations } from "@/i18n/types";
+export type { Project, ResumeFile, SkillTag, Translations } from "@/i18n/types";

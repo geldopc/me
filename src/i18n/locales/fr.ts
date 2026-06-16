@@ -37,7 +37,16 @@ export const fr: Translations = {
 	},
 	projects: {
 		title: "Projets",
+		subtitle: "Des choses que je construis pour le plaisir du métier.",
 		empty: "Projets en vedette bientôt disponibles",
+		liveCta: "Démo",
+		sourceCta: "Code",
+		descriptions: {
+			"xml-formatter":
+				"Un formateur XML plein écran — indenter, minifier et inspecter du XML avec coloration syntaxique en direct, glisser-déposer et URLs partageables compressées. Entièrement côté client, sans backend.",
+			"json-formatter":
+				"Un formateur JSON plein écran — indenter, minifier et valider du JSON avec coloration syntaxique en direct et retour d'erreur instantané. Entièrement côté client, sans backend.",
+		},
 	},
 	resume: {
 		cta: "Télécharger le CV",

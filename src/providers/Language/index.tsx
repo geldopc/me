@@ -8,7 +8,13 @@ import {
 	translations,
 } from "@/i18n";
 
-export type { Language, ResumeFile, SkillTag, Translations } from "@/i18n";
+export type {
+	Language,
+	Project,
+	ResumeFile,
+	SkillTag,
+	Translations,
+} from "@/i18n";
 
 interface LanguageContextType {
 	language: Language;

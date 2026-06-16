@@ -4,7 +4,7 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"predev": "node scripts/free-port.mjs 5173",
+		"predev": "node scripts/free-port.mjs 5200",
 		"dev": "vite",
 		"net": "node scripts/net.mjs",
 		"build": "tsc -b && vite build",

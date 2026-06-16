@@ -5,6 +5,10 @@ import { defineConfig } from "vite";
 
 export default defineConfig(({ command }) => ({
 	base: command === "build" ? "/me/" : "/",
+	server: {
+		port: 5200,
+		strictPort: true,
+	},
 	plugins: [react(), tailwindcss()],
 	resolve: {
 		alias: {

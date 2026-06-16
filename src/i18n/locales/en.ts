@@ -36,7 +36,16 @@ export const en: Translations = {
 	},
 	projects: {
 		title: "Projects",
+		subtitle: "Things I build for the craft of it.",
 		empty: "Featured projects coming soon",
+		liveCta: "Live demo",
+		sourceCta: "Source",
+		descriptions: {
+			"xml-formatter":
+				"A full-screen XML formatter — prettify, minify and inspect XML with live syntax highlighting, drag-and-drop and shareable compressed URLs. Fully client-side, no backend.",
+			"json-formatter":
+				"A full-screen JSON formatter — prettify, minify and validate JSON with live syntax highlighting and instant error feedback. Fully client-side, no backend.",
+		},
 	},
 	resume: {
 		cta: "Download CV",
